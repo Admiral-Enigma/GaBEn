@@ -79,5 +79,11 @@ func onMessage(s *discordgo.Session, m *discordgo.MessageCreate) {
 			return
 		}
 		s.ChannelFileSendWithMessage(m.ChannelID, "CAT!", "cat.gif", cat)
+	} else if m.Content == "!bingbingbong" {
+		s.ChannelMessageSend(m.ChannelID, "https://www.youtube.com/watch?v=kv5mPHGOp5E")
+	} else if m.Content == "!fuckdig" {
+		s.ChannelMessageSend(m.ChannelID, "Fuck dig jeg kommer og chopper dig " + m.Author.Username)
+	} else if m.Content == "!megaman" {
+		s.ChannelMessageSend(m.ChannelID, "https://www.youtube.com/watch?v=DyDxh3fjUv8")
 	}
 }
